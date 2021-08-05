@@ -1,7 +1,7 @@
 <template>
   <TypeCore header="CringeType" :transformed="this.transformed">
     <template v-slot:description>
-      Exactly the same algorithm as the original <a href="https://antrikshy.com/CringeType">CringeType</a>.
+      Same algorithm as the original <a href="https://antrikshy.com/CringeType">CringeType</a>.
     </template>
   </TypeCore>
 </template>

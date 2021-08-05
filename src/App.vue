@@ -42,6 +42,11 @@ html {
   color: #1e2c3a;
   background-color: #faeee7;
 }
+@media (max-width: 900px) {
+  html {
+    margin: 0.5rem;
+  }
+}
 
 a {
   color: #1e2c3a;
@@ -58,6 +63,7 @@ input {
   margin-bottom: 3rem;
   border: 0;
   border-bottom: 3px solid #fff;
+  border-radius: 5px;
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
@@ -66,6 +72,12 @@ input {
 input:focus {
   outline: none;
   border-bottom: 3px solid #1e2c3a;
+}
+@media (max-width: 900px) {
+  input {
+    width: 85vw;
+    margin-bottom: 1rem;
+  }
 }
 h1 {
   cursor: default;

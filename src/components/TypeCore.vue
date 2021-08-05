@@ -43,4 +43,10 @@
     opacity: 50%;
     font-style: italic;
   }
+  @media (max-width: 900px) {
+    .transformation-container {
+      width: 80vw;
+      margin: 1rem 0;
+    }
+  }
 </style>
