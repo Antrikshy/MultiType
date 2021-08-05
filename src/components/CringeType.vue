@@ -1,11 +1,14 @@
 <template>
-  <h2>⸺ CringeType ⸺</h2>
-  <p v-if="transformed">{{ transformed }}</p>
-  <p v-else class="placeholder">Start typing.</p>
-  <button :disabled="!transformed" @click="navigator.clipboard.writeText(transformed)">Copy</button>
+  <TypeCore header="CringeType" :transformed="this.transformed">
+    <template v-slot:description>
+      Exactly the same algorithm as the original <a href="https://antrikshy.com/CringeType">CringeType</a>.
+    </template>
+  </TypeCore>
 </template>
 
 <script>
+  import TypeCore from './TypeCore.vue'
+
   const _replacements = {
     "!": ["!", "1"],
     "a": ["a", "A", "@", "4"],
@@ -37,6 +40,9 @@
   }
 
   export default {
+    components: {
+      TypeCore
+    },
     props: {
       input: String
     },

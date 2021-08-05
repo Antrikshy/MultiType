@@ -1,12 +1,14 @@
 <template>
-  <h2>⸺ ReverseType ⸺</h2>
-  <p v-if="transformed">{{ transformed }}</p>
-  <p v-else class="placeholder">Start typing.</p>
-  <button :disabled="!transformed" @click="navigator.clipboard.writeText(transformed)">Copy</button>
+  <TypeCore header="ReverseType" :transformed="this.transformed"/>
 </template>
 
 <script>
+  import TypeCore from './TypeCore.vue'
+
   export default {
+    components: {
+      TypeCore
+    },
     props: {
       input: String
     },
